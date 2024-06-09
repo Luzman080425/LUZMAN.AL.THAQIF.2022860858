@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>Favorites</title>
+<link rel="stylesheet" type="text/css" href="favorites.css">
+</head>
+
+<body>
+
+<style>
+body {
+  background-image: url("hijau.4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="me.html">About Me</a>
+  <a href="family.html">Family</a>
+  <a href="favorites.html">Favorites</a>
+  <a href="music.html">Music</a>
+  <a href="socmed.html">UiTM</a>
+  <a href="hometown.html">Hometown</a>
+  <a href="education.html">Education</a>
+</div>
+
+<div class="header">
+  <h1>My Favorites</h1>
+  <center>
+</div>
+
+
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('foods')"> Foods</button>
+    <button class="btn" onclick="filterSelection('movies')"> Movies</button>
+    <button class="btn" onclick="filterSelection('bandgroup')"> Band Group</button>
+  </div>
+
+  <link rel="stylesheet" type="text/css" href="portfolio.gallery.css">
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column foods">
+      <div class="content">
+        <img src="laksa.sarawak.jpg" alt="Laksa Sarawak" style="width:100%">
+        <h4>Laksa</h4>
+        <p>This is my top favorite food which is Sarawak food! Really love the taste of the santan curry, the ingredients oh my god im hungry</p>
+      </div>
+    </div>
+
+    <div class="column movies">
+      <div class="content">
+        <img src="tarot.jpg" alt="Tarot" style="width:100%">
+        <h4>Tarot</h4>
+        <p>A LOT OF JUMPSCARE!! And i love it<p>
+      </div>
+    </div>
+
+    <div class="column bandgroup">
+      <div class="content">
+        <img src="red.velvet.jpg" alt="Red Velvet" style="width:100%">
+        <h4>Red Velvet</h4>
+        <p>RV stans for Red Velvet and Real Vocal (slayed)</p>
+      </div>
+    </div>
+  </div>
+  <!-- END GRID -->
+
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+
+  <footer>
+    <p>2024Copyright by ©LUZMAN AL THAQIF :
+      <a href="mailto:luzmanthaqif.narzaruddin@gmail.com">luzmanthaqif.narzaruddin@gmail.com</a> |
+      <a href="mailto:2022860858@student.uitm.edu.my">2022860858@student.uitm.edu.my</a> |
+      <a href="mailto:luzmanalthaqif25@gmail.com">luzmanalthaqif25@gmail.com</a>
+    </p>
+    <p>+601 0780 4197</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Education</title>
+<link rel="stylesheet" type="text/css" href="education.css">
+</head>
+
+<body>
+
+<div class="topnav">
+  <a class="active" href="index.html"><font face="Time New Roman">Home</font></a>
+  <a href="me.html"><font face="Time New Roman">About Me</font></a>
+  <a href="family.html"><font face="Time New Roman">Family</font></a>
+  <a href="favorites.html"><font face="Time New Roman">Favorites</font></a>
+  <a href="music.html"><font face="Time New Roman">Music</font></a>
+  <a href="socmed.html"><font face="Time New Roman">UiTM</font></a>
+  <a href="hometown.html"><font face="Time New Roman">Hometown</font></a>
+  <a href="education.html"><font face="Time New Roman">Education</font></a>
+</div>
+
+<div class="header">
+  <h1><font face="Time New Roman">Involvement Journey</font></h1>
+  <center>
+</div>
+
+
+<h2 style="text-align:center"><font color="#582f0e" face="Times New Roman" size=30>I participated in many programs at UiTM as a committee member</font></h2>
+
+<div class="container">
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="pmds.4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="rollcall.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="fzth.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="townhall.jpg" style="width:100%">
+  </div>
+
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="pmds.4.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pemimpin Minggu Destini Siswa">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="rollcall.jpg" style="width:100%" onclick="currentSlide(2)" alt="Malam Mesra Malinja">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="fzth.jpg" style="width:100%" onclick="currentSlide(3)" alt="From Zero to Hero">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="townhall.jpg" style="width:100%" onclick="currentSlide(4)" alt="Townhall Keselamatan dan Kesihatan">
+    </div>    
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+  <footer>
+    <p>2024Copyright by ©LUZMAN AL THAQIF :
+      <a href="mailto:luzmanthaqif.narzaruddin@gmail.com">luzmanthaqif.narzaruddin@gmail.com</a> |
+      <a href="mailto:2022860858@student.uitm.edu.my">2022860858@student.uitm.edu.my</a> |
+      <a href="mailto:luzmanalthaqif25@gmail.com">luzmanalthaqif25@gmail.com</a>
+    </p>
+    <p>+601 0780 4197</p>
+  </footer>
+
+
+</body>

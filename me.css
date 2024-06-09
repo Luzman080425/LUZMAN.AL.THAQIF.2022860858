@@ -1,0 +1,136 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ccd5ae;
+}
+
+p.title{
+	font-family: Arial; padding: -5px; font-weight:bold; text-align:center; font-size:50px
+}
+
+p.subtitle{
+	font-family: Arial; font-weight: ; text-align:center; font-size:10px
+}
+
+/*---------------------------------------Add a black background color to the top navigation */
+.topnav {
+  background-color: #283618;
+  overflow: hidden;
+}
+
+/*-----------------------------------------Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #e9edc9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/*----------------------------------------------Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*----------------------------------------------Add a color to the active/current link */
+.topnav a.active {
+  background-color: #588157;
+  color: white90;
+}
+
+/*--------------------------------------------------------Header styling */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #a3b18a;
+  color: #918450;
+  font-size: 30px;
+}
+
+
+/*-------------------------------------------------------Side by side images */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/*-----------------------------------------------------Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*-----------------------------------------------------ease-and-out pictures */
+:root {
+  --img-width: 50px;
+  --img-height: 500px;
+  --img-hover-width: 400px;
+  --border-radius: 50px;
+  --transition-duration: 0.3s;
+  --margin-right: 20px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Center the images vertically */
+  gap: var(--margin-right); /* Use gap for spacing */
+}
+
+img {
+  width: var(--img-width);
+  height: var(--img-height);
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: width var(--transition-duration) ease-in-out;
+}
+
+img:hover {
+  width: var(--img-hover-width);
+}
+
+/* Media query for better responsiveness */
+@media (max-width: 800px) {
+  img {
+    height: auto; /* Maintain aspect ratio on smaller screens */
+  }
+
+    .text-block h4 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .text-block p {
+      margin: 5px 0 0;
+      font-size: 1em;
+    }
+}
+
+/*---------------------------------------------------------Footer styling */
+footer {
+  width: 100%;
+  border-top: 5px solid #a4ac86;
+  text-align: center;
+  background-color: #81b29a;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  padding: 10px 0;
+  position: bottom;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  margin: 0;
+  padding: 5px;
+}
